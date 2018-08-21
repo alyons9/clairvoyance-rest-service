@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+        bindings:
+          forecastResults-in: 
+            destinations: forecastResults
+            contentType: application/json
+          forecastData-out:
+            destinations: forecastData
+            contentType: application/json
